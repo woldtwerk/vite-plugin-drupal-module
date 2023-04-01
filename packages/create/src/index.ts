@@ -72,7 +72,7 @@ import fse from 'fs-extra'
   s.start('Installing Drupal Core...')
   const composerJson = files.filter(file => file.match('composer.json'))?.at(0)
   !composerJson && await fs.writeFile('composer.json', JSON.stringify({
-    name,
+    name: `drupal/${name.toString()}`,
     version: '0.0.1',
   }, null, 4))
   await execa('composer', ['require', 'drupal/core', '--dev'])
@@ -91,11 +91,11 @@ async function copyFiles(name: string) {
   ], {
     onlyFiles: true,
     dot: true,
-    cwd: path.resolve('../template'),
+    cwd: path.resolve(__dirname, '../template'),
   })
 
   files.forEach(async (file) => {
-    const content = await fse.readFile(path.resolve('../template', file), 'utf8')
+    const content = await fse.readFile(path.resolve(__dirname, '../template', file), 'utf8')
     await fse.outputFile(path.resolve(process.cwd(), file.replace('module_name', name)), content.replace(/module_name/g, name))
   })
 }

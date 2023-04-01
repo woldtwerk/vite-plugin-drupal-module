@@ -12,7 +12,6 @@ export default defineBuildConfig({
     'rollup',
   ],
   rollup: {
-    emitCJS: true,
     inlineDependencies: true,
   },
 })

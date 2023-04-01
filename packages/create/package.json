@@ -9,7 +9,6 @@
     "url": "git+https://github.com/woldtwerk/vite-plugin-drupal-module.git",
     "directory": "packages/create"
   },
-  "main": "dist/index.cjs",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "bin": {
