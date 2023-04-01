@@ -91,11 +91,11 @@ async function copyFiles(name: string) {
   ], {
     onlyFiles: true,
     dot: true,
-    cwd: path.resolve(__dirname, '../template'),
+    cwd: path.resolve('../template'),
   })
 
   files.forEach(async (file) => {
-    const content = await fse.readFile(path.resolve(__dirname, '../template', file), 'utf8')
+    const content = await fse.readFile(path.resolve('../template', file), 'utf8')
     await fse.outputFile(path.resolve(process.cwd(), file.replace('module_name', name)), content.replace(/module_name/g, name))
   })
 }
