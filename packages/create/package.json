@@ -13,7 +13,7 @@
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "bin": {
-    "create-drupal-module": "dist/index.js"
+    "create-drupal-module": "dist/index.mjs"
   },
   "files": [
     "dist",
