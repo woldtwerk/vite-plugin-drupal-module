@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-drupal-module-monorepo",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "private": true,
   "author": "Willi Woldt",
   "license": "MIT",
