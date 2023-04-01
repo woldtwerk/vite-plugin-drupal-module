@@ -2,6 +2,7 @@
 
 import path from 'node:path'
 import fs from 'node:fs/promises'
+import { fileURLToPath } from 'url'
 import { execa } from 'execa'
 import { cancel, intro, isCancel, multiselect, outro, spinner, text } from '@clack/prompts'
 import color from 'picocolors'
@@ -9,7 +10,10 @@ import { installPackage } from '@antfu/install-pkg'
 import fg from 'fast-glob'
 import fse from 'fs-extra'
 
-(async () => {
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+
+;(async () => {
   intro(color.inverse(' Create Drupal Module '))
 
   const files = await fs.readdir(process.cwd())
