@@ -20,6 +20,6 @@
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "release": "bumpp package.json packages/*/package.json --commit --push --tag"
+    "release": "nix bumpp package.json packages/*/package.json --commit --push --tag"
   }
 }
