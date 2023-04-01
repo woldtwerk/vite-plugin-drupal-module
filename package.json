@@ -1,6 +1,7 @@
 {
-  "name": "@woldtwerk/vite-plugin-drupal-module-monorepo",
+  "name": "vite-plugin-drupal-module-monorepo",
   "version": "0.0.5",
+  "private": true,
   "author": "Willi Woldt",
   "license": "MIT",
   "homepage": "https://github.com/woldtwerk/vite-plugin-drupal-module",
