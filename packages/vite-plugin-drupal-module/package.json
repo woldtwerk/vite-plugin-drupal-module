@@ -1,0 +1,53 @@
+{
+  "name": "@woldtwerk/vite-plugin-drupal-module",
+  "version": "0.0.0",
+  "author": "Willi Woldt",
+  "license": "MIT",
+  "homepage": "https://github.com/woldtwerk/vite-plugin-drupal-module/tree/main/packages/vite-plugin-drupal-module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woldtwerk/vite-plugin-drupal-module.git",
+    "directory": "packages/vite-plugin-drupal-module"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "types"
+  ],
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=7.30.0"
+  },
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "prepack": "pnpm run build"
+  },
+  "dependencies": {
+    "@types/js-cookie": "^3.0.3",
+    "unimport": "^3.0.4"
+  },
+  "optionalDependencies": {
+    "@vitejs/plugin-vue": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.10",
+    "defu": "^6.1.2",
+    "fast-glob": "^3.2.12",
+    "local-pkg": "^0.4.3",
+    "typescript": "^5.0.2",
+    "unbuild": "^1.1.2",
+    "unplugin-vue-components": "^0.24.1",
+    "vite": "^4.2.1",
+    "yaml": "^2.2.1"
+  }
+}
