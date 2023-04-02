@@ -1,6 +1,6 @@
 {
   "name": "@woldtwerk/vite-plugin-drupal-module",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "author": "Willi Woldt",
   "license": "MIT",
   "homepage": "https://github.com/woldtwerk/vite-plugin-drupal-module/tree/main/packages/vite-plugin-drupal-module",
