@@ -46,13 +46,22 @@ export default (ctx: Context): Plugin => {
                 return `[name]${hash}.[ext]`
               },
               entryFileNames: (assetInfo) => {
-                if (assetInfo.facadeModuleId?.match(/.(ts|js|tsx|jsx|css)$/)) {
+                if (assetInfo.facadeModuleId?.match(/.(ts|js|tsx|jsx|css|scss|pcss))$/)) {
                   const base = dirname(relative('./', assetInfo.facadeModuleId))
                   return `${base}/[name]${hash}.js`
                 }
                 return `[name]${hash}.js`
               },
             },
+          },
+        },
+        experimental: {
+          renderBuiltUrl(filename: string, { type }: { type: 'public' | 'asset' }) {
+            if (type === 'public')
+              return `../../public/${filename}`
+
+            else
+              return filename
           },
         },
       })
