@@ -22,6 +22,10 @@ const defaultOptions: UserOptions = {
   version: 'module',
   unimport: {
     dts: '.drupal/unimport.d.ts',
+    presets: [
+      'vue',
+      '@vueuse/core',
+    ],
     dirs: [
       './js',
     ],

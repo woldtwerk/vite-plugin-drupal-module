@@ -66,7 +66,7 @@ const __dirname = path.dirname(__filename)
     'typescript',
     '@woldtwerk/vite-plugin-drupal-module',
     ...(features.includes('vue')
-      ? ['vue', '@vitejs/plugin-vue', 'unplugin-vue-components']
+      ? ['vue', '@vitejs/plugin-vue', 'unplugin-vue-components', 'vue-tsc', '@vueuse/core']
       : []
     ),
   ]
