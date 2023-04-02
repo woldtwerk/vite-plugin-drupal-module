@@ -117,7 +117,7 @@ export default (ctx: Context): Plugin => {
             cssGroups.flatMap(group => Object.keys(lib.css?.[group] ?? {}))
               .map(val => `<link rel="stylesheet" href="/${corePath}/${val}">`),
             (Object.keys(lib.js ?? {}) ?? [])
-              .map(val => `<script src="/${corePath}/${val}"></script>`),
+              .map(val => `<script type="text/javascript" src="/${corePath}/${val}"></script>`),
           ].flat()
         })
         .join('')
