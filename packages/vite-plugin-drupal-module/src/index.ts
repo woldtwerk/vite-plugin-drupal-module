@@ -1,4 +1,3 @@
-import { exit } from 'process'
 import type { Plugin } from 'vite'
 import { isPackageExists } from 'local-pkg'
 import Unimport from 'unimport/unplugin'
@@ -38,7 +37,6 @@ async function addOptionalPlugin(ctx: Context): Promise<Plugin[]> {
     }
     catch (_) {
       console.error('Couldn\'t find unplugin-vue-components. Please install it with `pnpm i -D unplugin-vue-components`')
-      exit(1)
     }
 
     try {
@@ -47,7 +45,6 @@ async function addOptionalPlugin(ctx: Context): Promise<Plugin[]> {
     }
     catch (_) {
       console.error('Couldn\'t find @vitejs/plugin-vue. Please install it with `pnpm i -D @vitejs/plugin-vue`')
-      exit(1)
     }
   }
   return optionalPlugins
