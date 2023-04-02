@@ -46,7 +46,7 @@ export default (ctx: Context): Plugin => {
                 return `[name]${hash}.[ext]`
               },
               entryFileNames: (assetInfo) => {
-                if (assetInfo.facadeModuleId?.match(/.(ts|js|tsx|jsx|css|scss|pcss))$/)) {
+                if (assetInfo.facadeModuleId?.match(/.(ts|js|tsx|jsx|css|scss|pcss)$/)) {
                   const base = dirname(relative('./', assetInfo.facadeModuleId))
                   return `${base}/[name]${hash}.js`
                 }
