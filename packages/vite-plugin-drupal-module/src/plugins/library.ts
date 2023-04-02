@@ -58,7 +58,7 @@ export default (ctx: Context): Plugin => {
       const files = Object.values(bundle)
         .filter(
           assetOrChunk =>
-            assetOrChunk.type === 'asset' || (assetOrChunk.type === 'chunk' && assetOrChunk.code !== '\n' && assetOrChunk.isDynamicEntry === false),
+            assetOrChunk.type === 'asset' || (assetOrChunk.type === 'chunk' && assetOrChunk.code !== '\n' && assetOrChunk.isDynamicEntry === false && !assetOrChunk.fileName.match(/^asset/)),
         )
         .map(assetOrChunk => assetOrChunk.fileName)
 

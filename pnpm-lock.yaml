@@ -28,7 +28,7 @@ importers:
   packages/foo_bar:
     specifiers:
       '@vitejs/plugin-vue': ^4.1.0
-      '@woldtwerk/vite-plugin-drupal-module': workspace:^0.0.7
+      '@woldtwerk/vite-plugin-drupal-module': workspace:^0.0.10
       typescript: ^5.0.2
       unplugin-vue-components: ^0.24.1
       vite: ^4.2.1
@@ -674,13 +674,11 @@ packages:
   /@vitejs/plugin-vue/4.1.0_vite@4.2.1:
     resolution: {integrity: sha512-++9JOAFdcXI3lyer9UKUV4rfoQ3T1RN8yDqoCLar86s0xQct5yblxAE+yWgRnU5/0FOlVCpTZpYSBV/bGWrSrQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
-    requiresBuild: true
     peerDependencies:
       vite: ^4.0.0
       vue: ^3.2.25
     dependencies:
       vite: 4.2.1_@types+node@18.15.10
-    dev: false
     optional: true
 
   /@vitejs/plugin-vue/4.1.0_vite@4.2.1+vue@3.2.47:
