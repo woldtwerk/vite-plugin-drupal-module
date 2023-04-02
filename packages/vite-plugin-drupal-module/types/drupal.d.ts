@@ -5,7 +5,9 @@ declare global {
   const Drupal: Drupal
   const drupalSettings: Drupal.DrupalSettings
   const once: <T extends Element>(id: string, selector, context?: Document | Element) => T[]
-  const Cookies: CookiesStatic
+  const Cookies: Cookies.CookiesStatic & {
+    noConflict?(): Cookies.CookiesStatic;
+  }
 
   interface Window {
     Drupal: Drupal
